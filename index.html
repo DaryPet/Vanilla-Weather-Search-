@@ -15,8 +15,9 @@
   <body>
     <div class="weather-app">
       <header>
-        <form class="search-form">
+        <form class="search-form" id="search-form">
           <input
+            id="search-form-input"
             class="search-form-input"
             type="search"
             placeholder="Enter a city..."
@@ -28,16 +29,17 @@
       <main>
         <div class="main-wrap">
           <div class="info">
-            <h1 class="main-title">Barcelona</h1>
-            <p class="main-info">
+            <h1 class="main-title" id="city-name">Barcelona</h1>
+            <p class="main-info" id="weather-info">
               Tuesday 22:21, clear sky
               <br />
-              Humidity: <strong>57%,</strong> Wind: <strong>3.6km/h</strong>
+              Humidity: <strong id="humidity">57%,</strong> Wind:
+              <strong id="wind-speed">3.6km/h</strong>
             </p>
           </div>
           <div class="temperature">
             <p class="emoji">&#127780;</p>
-            <p class="temp">8</p>
+            <p class="temp" id="temperature">8</p>
             <p class="degree">°C</p>
           </div>
         </div>
@@ -51,5 +53,8 @@
         <a href=""></a>
       </footer>
     </div>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./main.js"></script>
   </body>
 </html>
